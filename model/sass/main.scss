@@ -1,0 +1,165 @@
+@import '_variables';
+@import '_mixins';
+@import '_placeholders';
+@import '_components';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap');
+
+@import 'layout/header';
+@import 'layout/footer';
+
+
+main {
+    font-family: 'Roboto', sans-serif;
+
+    & .localisation {
+        @extend %grid-center;
+        @include grid-template-set1(1);
+        padding: 1em;
+        background: #eaeaea;
+        background: linear-gradient(180deg,
+                rgba(173, 173, 173, .35) 0%,
+                rgba(234, 234, 234, .75) 15%,
+                rgba(234, 234, 234, 1) 100%);
+
+        & i {
+            padding: 0 0.5em 0 0;
+        }
+    }
+
+    & .presentation {
+        @extend %grid-center;
+        @include grid-template-set1(1);
+        padding: 2em 0 3em;
+        background: #f6f6f6;
+        text-align: center;
+
+        & h2 {
+            padding: 0 5em;
+        }
+
+        & p {
+            padding: 1em 5em 2em;
+        }
+    }
+
+
+    & .commentCaMarche {
+        @include grid-template-set1(1);
+        @extend %grid-center;
+        padding: 3em 1em;
+
+        & h2 {
+            @include grid-pos-set(1, auto, 1, 2);
+            justify-self: start;
+        }
+
+        & ol {
+            @include grid-pos-set(2, auto, 1, 4);
+            display: grid;
+            @include grid-template-set1(3);
+            gap: 2em;
+            margin: 1em 1em 0;
+            justify-self: normal;
+            counter-reset: section;
+        }
+
+
+        & li::before {
+            counter-increment: section;
+            content: counter(section);
+            position: relative;
+            left: -1.9em;
+            padding: 0.3em 0.6em;
+            border-radius: 70%;
+            background-color: $color-primary;
+            color: $txt-fond-sombre;
+        }
+
+        & li {
+            & p {
+                margin: 0;
+
+                & .fas {
+                    margin: 15px;
+                }
+            }
+        }
+
+    }
+
+    /* Debut section lesRestaurants */
+    & .lesRestaurants {
+        @extend %grid-center;
+        @include grid-template-set1(1);
+        padding: 3em 1em;
+        background: #f6f6f6;
+
+        & h2 {
+            @include grid-pos-set (1, auto, 1, 2);
+            justify-self: start;
+        }
+
+        & ul {
+            @include grid-pos-set (2, auto, 1, 5);
+            display: grid;
+            @include grid-template-set1 (4);
+            grid-gap: 2em;
+            justify-self: normal;
+            margin: 1em 0;
+
+            & li {
+                display: inline-block;
+                width: 100%;
+
+                & a {
+                    display: block;
+                    position: relative;
+                    padding: 0 0 0.7rem 0;
+                    color: $txt-fond-clair;
+                    border-radius: 1.5em;
+                    box-shadow: 0 3px 10px rgb(0, 0, 0.2);
+
+                    & .sticker {
+                        position: absolute;
+                        right: 1em;
+                        top: 1em;
+                        padding: 0.4em 0.6em;
+                        color: $txt-fond-vert;
+                        background: $vert-clair;
+                        border-radius: 0.2em;
+                    }
+
+                    & img {
+                        padding: 0 0 0.5rem 0;
+                        width: 100%;
+                        height: 12.5em;
+                        object-fit: cover;
+                        border-radius: 1.5em 1.5em 0 0;
+                    }
+
+                    & h3,
+                    p {
+                        padding: 0 1rem 0.5rem;
+                    }
+
+                    & .btn__like {
+                        position: absolute;
+                        bottom: 2.5rem;
+                        right: 1.5rem;
+                        font-size: 1.5em;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+        }
+
+
+    }
+
+    & .menuDuResto {
+        background-color: white;
+    }
+
+}

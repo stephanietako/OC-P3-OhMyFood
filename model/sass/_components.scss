@@ -1,0 +1,66 @@
+.btn {
+    padding: 1em 1.5em;
+    color: $txt-fond-sombre;
+    transition: 250ms;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    &--gradient {
+        background-image:
+            radial-gradient(100% 50% at 20% 10%,
+                #FF79DA 0%,
+                #9356DC 200%);
+    }
+
+    &--radius {
+        border-radius: 2em;
+    }
+
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.list-item {
+    padding: 1.5em 1em;
+    text-align: left;
+    border-radius: 1em;
+    box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+}
+
+.btn__like,
+button {
+    & .heart-away {
+        display: block;
+        transform: scale(1);
+        transition: all 0.5s;
+    }
+
+    & .heart-hover {
+        display: block;
+        position: absolute;
+        top: 0;
+        transform: scale(0);
+        transition: all 0.5s;
+        background-color: black;
+        background-image: linear-gradient(0deg, $color-secondary, $color-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+}
+
+.btn__like:hover,
+button:hover {
+    & .heart-away {
+        opacity: 0;
+        transform: scale(0);
+
+    }
+
+    & .heart-hover {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

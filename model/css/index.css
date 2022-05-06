@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap");
+main .localisation, main .presentation, main .commentCaMarche, main .lesRestaurants {
+  display: grid;
+  align-items: center;
+  justify-items: center; }
+
+header {
+  box-shadow: 0 3px 5px #dcdcdc; }
+
+.btn {
+  padding: 1em 1.5em;
+  color: #ffffff;
+  transition: 250ms;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+  .btn--gradient {
+    background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%); }
+  .btn--radius {
+    border-radius: 2em; }
+  .btn:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.list-item {
+  padding: 1.5em 1em;
+  text-align: left;
+  border-radius: 1em;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2); }
+
+.btn__like .heart-away,
+button .heart-away {
+  display: block;
+  transform: scale(1);
+  transition: all 0.5s; }
+.btn__like .heart-hover,
+button .heart-hover {
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: scale(0);
+  transition: all 0.5s;
+  background-color: black;
+  background-image: linear-gradient(0deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent; }
+
+.btn__like:hover .heart-away,
+button:hover .heart-away {
+  opacity: 0;
+  transform: scale(0); }
+.btn__like:hover .heart-hover,
+button:hover .heart-hover {
+  opacity: 1;
+  transform: scale(1); }
+
+header {
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  padding: 0 0 8px 0;
+  position: relative; }
+
+footer {
+  display: grid;
+  width: 100%;
+  height: 150px;
+  background-color: #353535; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+    color: #fff;
+    margin: 0px;
+    padding: 25px 0 7px 25px; }
+  footer ul {
+    list-style: none;
+    background-color: #353535;
+    margin: 0;
+    padding-left: 16px;
+    padding-bottom: 20px; }
+    footer ul li {
+      padding: 0;
+      margin: 0; }
+      footer ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding-left: 13px; }
+        footer ul li a i {
+          padding-right: 12px; }
+
+main {
+  font-family: 'Roboto', sans-serif;
+  /* Debut section lesRestaurants */ }
+  main .localisation {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1em;
+    background: #eaeaea;
+    background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, #eaeaea 100%); }
+    main .localisation i {
+      padding: 0 0.5em 0 0; }
+  main .presentation {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2em 0 3em;
+    background: #f6f6f6;
+    text-align: center; }
+    main .presentation h2 {
+      padding: 0 5em; }
+    main .presentation p {
+      padding: 1em 5em 2em; }
+  main .commentCaMarche {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3em 1em; }
+    main .commentCaMarche h2 {
+      grid-row: 1 / auto;
+      grid-column: 1 / 2;
+      justify-self: start; }
+    main .commentCaMarche ol {
+      grid-row: 2 / auto;
+      grid-column: 1 / 4;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2em;
+      margin: 1em 1em 0;
+      justify-self: normal;
+      counter-reset: section; }
+    main .commentCaMarche li::before {
+      counter-increment: section;
+      content: counter(section);
+      position: relative;
+      left: -1.9em;
+      padding: 0.3em 0.6em;
+      border-radius: 70%;
+      background-color: #9356DC;
+      color: #ffffff; }
+    main .commentCaMarche li p {
+      margin: 0; }
+      main .commentCaMarche li p .fas {
+        margin: 15px; }
+  main .lesRestaurants {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3em 1em;
+    background: #f6f6f6; }
+    main .lesRestaurants h2 {
+      grid-row: 1 / auto;
+      grid-column: 1 / 2;
+      justify-self: start; }
+    main .lesRestaurants ul {
+      grid-row: 2 / auto;
+      grid-column: 1 / 5;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2em;
+      justify-self: normal;
+      margin: 1em 0; }
+      main .lesRestaurants ul li {
+        display: inline-block;
+        width: 100%; }
+        main .lesRestaurants ul li a {
+          display: block;
+          position: relative;
+          padding: 0 0 0.7rem 0;
+          color: #000000;
+          border-radius: 1.5em;
+          box-shadow: 0 3px 10px black; }
+          main .lesRestaurants ul li a .sticker {
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            padding: 0.4em 0.6em;
+            color: #008766;
+            background: #99e2d0;
+            border-radius: 0.2em; }
+          main .lesRestaurants ul li a img {
+            padding: 0 0 0.5rem 0;
+            width: 100%;
+            height: 12.5em;
+            object-fit: cover;
+            border-radius: 1.5em 1.5em 0 0; }
+          main .lesRestaurants ul li a h3,
+          main .lesRestaurants ul li a p {
+            padding: 0 1rem 0.5rem; }
+          main .lesRestaurants ul li a .btn__like {
+            position: absolute;
+            bottom: 2.5rem;
+            right: 1.5rem;
+            font-size: 1.5em;
+            cursor: pointer; }
+  main .menuDuResto {
+    background-color: white; }
+
+/*# sourceMappingURL=index.css.map */

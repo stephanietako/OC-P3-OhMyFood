@@ -1,0 +1,13 @@
+%grid-center {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+%border-shadow {
+    box-shadow: 0 3px 5px #dcdcdc;
+}
+
+%transform-scale {
+    transform: scale(1.2);
+}
