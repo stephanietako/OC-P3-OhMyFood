@@ -1,93 +1,346 @@
-/*
-Error: wrong number of arguments (3 for 4) for `rgba'
-        on line 28 of model/sass/_components.scss
-        from line 4 of model/sass/main.scss
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap");
+main .localisation, main .presentation, main .commentCaMarche, main .lesRestaurants {
+  display: grid;
+  align-items: center;
+  justify-items: center; }
 
-23: 
-24:         & i {
-25:             padding: 0 0.5em 0 0;
-26:         }
-27:     }
-28: 
-29:     & .presentation {
-30:         @extend %grid-center;
-31:         @include grid-template-set1(1);
-32:         padding: 2em 0 3em;
-33:         background: #f6f6f6;
+.btn, header, main .lesRestaurants ul li a {
+  box-shadow: 0 3px 10px #dcdcdc; }
 
-Backtrace:
-model/sass/_components.scss:28
-model/sass/main.scss:4
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:311:in `reformat_argument_error'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:158:in `rescue in _perform'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:127:in `_perform'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `map'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `_perform'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `map'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Users/stephaniegabbay/.rvm/gems/ruby-2.7.4/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: wrong number of arguments (3 for 4) for `rgba'\A         on line 28 of model/sass/_components.scss\A         from line 4 of model/sass/main.scss\A \A 23: \A 24:         & i {\A 25:             padding: 0 0.5em 0 0;\A 26:         }\A 27:     }\A 28: \A 29:     & .presentation {\A 30:         @extend %grid-center;\A 31:         @include grid-template-set1(1);\A 32:         padding: 2em 0 3em;\A 33:         background: #f6f6f6;"; }
+.btn {
+  padding: 1em 1.5em;
+  color: #ffffff;
+  transition: 250ms; }
+  .btn--gradient {
+    background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%); }
+  .btn--radius {
+    border-radius: 2em; }
+  .btn:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.list-item {
+  padding: 0px 15px 15px 15px;
+  text-align: left;
+  border-radius: 1em;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+  background: #f6f6f6; }
+
+.btn__like .heart-away,
+button .heart-away {
+  display: block;
+  transform: scale(1);
+  transition: all 0.5s; }
+.btn__like .heart-hover,
+button .heart-hover {
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: scale(0);
+  transition: all 200ms ease-in-out;
+  background-color: #000000;
+  background-image: linear-gradient(0deg, #FF79DA, #9356DC);
+  /* cette propriété est une propriétée d'arrière-plan css qui permet 
+  de gérer les limites de la zone d'arrière-plan à l'interieur de l'élément.
+  ça va influencer l'affichage de l'image d'arrière plan ou de la couleur d'attère plan,
+  déclarée avec la propriétée background-image, background-couleur ou background. 
+  aussi background-clip vous permet de contrôler jusqu'où une image ou une couleur d'arrière-plan 
+  s'étend au-delà du rembourrage ou du contenu d'un élément.*/
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+ /* cette propriété spécifie la couleur de remplissage des caractère du texte.
+Les propriétés text-fill-color et color sont les mêmes,
+mais text-fill-color a priorité sur la couleur si les deux ont des valeurs différentes*/
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent; }
+
+.btn__like:hover .heart-away,
+button:hover .heart-away {
+  opacity: 0;
+  transform: scale(0); }
+.btn__like:hover .heart-hover,
+button:hover .heart-hover {
+  opacity: 1;
+  transform: scale(1); }
+
+header {
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  position: relative;
+  position: relative; }
+  header a {
+    text-decoration: none;
+    margin: 0; }
+    header a h1 {
+      margin: 0;
+      color: #000000; }
+      header a h1 span {
+        padding: 0 0.5em 0 0; }
+
+footer {
+  display: grid;
+  width: 100%;
+  height: 150px;
+  background-color: #353535; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+    color: #fff;
+    margin: 0px;
+    padding: 25px 0 7px 25px; }
+  footer ul {
+    list-style: none;
+    background-color: #353535;
+    margin: 0;
+    padding-left: 16px;
+    padding-bottom: 20px; }
+    footer ul li {
+      padding: 0;
+      margin: 0; }
+      footer ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding-left: 13px; }
+        footer ul li a i {
+          padding-right: 12px; }
+
+main {
+  font-family: 'Roboto', sans-serif;
+  /* Debut section lesRestaurants */ }
+  main .localisation {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1em;
+    background: #eaeaea;
+    background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, #eaeaea 100%); }
+    main .localisation a {
+      color: #353535; }
+    main .localisation i {
+      padding: 0 0.5em 0 0; }
+  main .presentation {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2em 0 3em;
+    background: #f6f6f6;
+    text-align: center; }
+    main .presentation h2 {
+      padding: 0 5em; }
+    main .presentation p {
+      padding: 1em 5em 2em;
+      color: #7d7d7d; }
+  main .commentCaMarche {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3em 1em; }
+    main .commentCaMarche h2 {
+      grid-row: 1 / auto;
+      grid-column: 1 / 2;
+      justify-self: start; }
+    main .commentCaMarche ol {
+      grid-row: 2 / auto;
+      grid-column: 1 / 4;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2em;
+      margin: 1em 1em 0;
+      justify-self: normal;
+      counter-reset: section; }
+    main .commentCaMarche li::before {
+      counter-increment: section;
+      content: counter(section);
+      position: relative;
+      left: -1.9em;
+      padding: 0.3em 0.6em;
+      border-radius: 70%;
+      background-color: #9356DC;
+      color: #ffffff;
+      top: 35px; }
+    main .commentCaMarche li {
+      display: block; }
+      main .commentCaMarche li p {
+        margin: 0; }
+        main .commentCaMarche li p .fas {
+          margin: 15px;
+          color: #7d7d7d; }
+  main .lesRestaurants {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3em 1em;
+    background: #f6f6f6; }
+    main .lesRestaurants h2 {
+      grid-row: 1 / auto;
+      grid-column: 1 / 2;
+      justify-self: start; }
+    main .lesRestaurants ul {
+      grid-row: 2 / auto;
+      grid-column: 1 / 5;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 2em;
+      justify-self: normal;
+      margin: 1em 0; }
+      main .lesRestaurants ul li {
+        display: inline-block;
+        width: 100%; }
+        main .lesRestaurants ul li a {
+          display: block;
+          position: relative;
+          padding: 0 0 0.7rem 0;
+          color: #000000;
+          border-radius: 1.5em; }
+          main .lesRestaurants ul li a .sticker {
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            padding: 0.4em 0.6em;
+            color: #1b6150;
+            background: #99E2D0;
+            border-radius: 0.2em; }
+          main .lesRestaurants ul li a img {
+            padding: 0 0 0.5rem 0;
+            width: 100%;
+            max-height: 60%;
+            object-fit: cover;
+            border-radius: 1.5em 1.5em 0 0; }
+          main .lesRestaurants ul li a h3,
+          main .lesRestaurants ul li a p {
+            padding: 0 1rem 0.5rem; }
+          main .lesRestaurants ul li a .btn__like {
+            position: absolute;
+            bottom: 2.5rem;
+            right: 1.5rem;
+            font-size: 1.5em;
+            cursor: pointer; }
+  main .menuDuResto {
+    background-color: #f6f6f6; }
+    main .menuDuResto .menuDuResto__cover {
+      height: 35.5em;
+      width: 100%;
+      object-fit: cover; }
+    main .menuDuResto .menuDuResto__carte h2 {
+      grid-row: 1 / auto;
+      grid-column: 1 / 2;
+      justify-self: start;
+      font-family: 'Shrikhand', cursive;
+      font-size: 28px;
+      padding-left: 15px; }
+      main .menuDuResto .menuDuResto__carte h2 button {
+        position: absolute;
+        right: 1.5rem;
+        font-size: 2rem;
+        cursor: pointer;
+        border: transparent;
+        background: transparent; }
+    main .menuDuResto .menuDuResto__carte .list-menu {
+      list-style: none;
+      padding-left: 15px;
+      padding-right: 15px; }
+      main .menuDuResto .menuDuResto__carte .list-menu h3 {
+        grid-row: 1 / auto;
+        grid-column: 1 / 2;
+        font-weight: lighter;
+        margin-top: 27px; }
+      main .menuDuResto .menuDuResto__carte .list-menu .list-item {
+        display: grid;
+        margin-bottom: 33px;
+        background: #ffffff; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--1 h4 {
+          font-weight: initial;
+          margin: 0;
+          padding-bottom: 2px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--1 p {
+          margin: 0;
+          font-weight: lighter; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--1 strong {
+          border: 2px solid red;
+          position: absolute;
+          right: 1.5rem; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--2 h4 {
+          font-weight: initial;
+          margin: 0;
+          padding-bottom: 2px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--2 p {
+          margin: 0;
+          font-weight: lighter; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--2 strong {
+          border: 2px solid red;
+          position: absolute;
+          right: 1.5rem; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--3 h4 {
+          font-weight: initial;
+          margin: 0;
+          padding-bottom: 2px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--3 p {
+          margin: 0;
+          font-weight: lighter; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--3 strong {
+          border: 2px solid red;
+          position: absolute;
+          right: 1.5rem; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--4 h4 {
+          font-weight: initial;
+          margin: 0;
+          padding-bottom: 2px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--4 p {
+          margin: 0;
+          font-weight: lighter; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--4 strong {
+          border: 2px solid red;
+          position: absolute;
+          right: 1.5rem; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--5 h4 {
+          font-weight: initial;
+          margin: 0;
+          padding-bottom: 2px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--5 p {
+          margin: 0;
+          font-weight: lighter; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--5 strong {
+          border: 2px solid red;
+          position: absolute;
+          right: 1.5rem; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--6 h4 {
+          font-weight: initial;
+          margin: 0;
+          padding-bottom: 2px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--6 p {
+          margin: 0;
+          font-weight: lighter; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--6 strong {
+          border: 2px solid red;
+          position: absolute;
+          right: 1.5rem; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--7 h4 {
+          font-weight: initial;
+          margin: 0;
+          padding-bottom: 2px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--7 p {
+          margin: 0;
+          font-weight: lighter; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--7 strong {
+          border: 2px solid red;
+          position: absolute;
+          right: 1.5rem; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--8 h4 {
+          font-weight: initial;
+          margin: 0;
+          padding-bottom: 2px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--8 p {
+          margin: 0;
+          font-weight: lighter; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--8 strong {
+          border: 2px solid red;
+          position: absolute;
+          right: 1.5rem; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--9 h4 {
+          font-weight: initial;
+          margin: 0;
+          padding-bottom: 2px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--9 p {
+          margin: 0;
+          font-weight: lighter; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--9 strong {
+          border: 2px solid red;
+          position: absolute;
+          right: 1.5rem; }
+
+/*# sourceMappingURL=index.css.map */

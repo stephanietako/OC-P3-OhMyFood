@@ -2,11 +2,9 @@
 @import '_mixins';
 @import '_placeholders';
 @import '_components';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap');
-
 @import 'layout/header';
 @import 'layout/footer';
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap');
 
 main {
     font-family: 'Roboto', sans-serif;
@@ -21,6 +19,10 @@ main {
                 rgba(234, 234, 234, .75) 15%,
                 rgba(234, 234, 234, 1) 100%);
 
+        & a {
+            color: $gris-sombre;
+        }
+
         & i {
             padding: 0 0.5em 0 0;
         }
@@ -30,7 +32,7 @@ main {
         @extend %grid-center;
         @include grid-template-set1(1);
         padding: 2em 0 3em;
-        background: #f6f6f6;
+        background: $background-gris-clair;
         text-align: center;
 
         & h2 {
@@ -39,9 +41,9 @@ main {
 
         & p {
             padding: 1em 5em 2em;
+            color: $gris-clair;
         }
     }
-
 
     & .commentCaMarche {
         @include grid-template-set1(1);
@@ -56,7 +58,7 @@ main {
         & ol {
             @include grid-pos-set(2, auto, 1, 4);
             display: grid;
-            @include grid-template-set1(3);
+            @include grid-template-set1(1);
             gap: 2em;
             margin: 1em 1em 0;
             justify-self: normal;
@@ -73,14 +75,19 @@ main {
             border-radius: 70%;
             background-color: $color-primary;
             color: $txt-fond-sombre;
+            top: 35px;
         }
 
         & li {
+            display: block;
+
             & p {
                 margin: 0;
 
                 & .fas {
                     margin: 15px;
+                    color: $gris-clair;
+
                 }
             }
         }
@@ -92,7 +99,7 @@ main {
         @extend %grid-center;
         @include grid-template-set1(1);
         padding: 3em 1em;
-        background: #f6f6f6;
+        background: $background-gris-clair;
 
         & h2 {
             @include grid-pos-set (1, auto, 1, 2);
@@ -102,7 +109,7 @@ main {
         & ul {
             @include grid-pos-set (2, auto, 1, 5);
             display: grid;
-            @include grid-template-set1 (4);
+            @include grid-template-set1 (1);
             grid-gap: 2em;
             justify-self: normal;
             margin: 1em 0;
@@ -117,22 +124,22 @@ main {
                     padding: 0 0 0.7rem 0;
                     color: $txt-fond-clair;
                     border-radius: 1.5em;
-                    box-shadow: 0 3px 10px rgb(0, 0, 0.2);
+                    @extend %border-shadow;
 
                     & .sticker {
                         position: absolute;
                         right: 1em;
                         top: 1em;
                         padding: 0.4em 0.6em;
-                        color: $txt-fond-vert;
-                        background: $vert-clair;
+                        color: darken($color: $color-tertiary, $amount: 50%);
+                        background: $color-tertiary;
                         border-radius: 0.2em;
                     }
 
                     & img {
                         padding: 0 0 0.5rem 0;
                         width: 100%;
-                        height: 12.5em;
+                        max-height: 60%;
                         object-fit: cover;
                         border-radius: 1.5em 1.5em 0 0;
                     }
@@ -154,12 +161,74 @@ main {
             }
 
         }
-
-
     }
 
     & .menuDuResto {
-        background-color: white;
-    }
+        background-color: $background-gris-clair;
 
+        & .menuDuResto__cover {
+            height: 35.5em;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        & .menuDuResto__carte {
+            & h2 {
+                @include grid-pos-set (1, auto, 1, 2);
+                justify-self: start;
+                font-family: 'Shrikhand', cursive;
+                font-size: 28px;
+                padding-left: 15px;
+
+                & button {
+                    position: absolute;
+                    right: 1.5rem;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    border: transparent;
+                    background: transparent;
+                }
+            }
+
+            & .list-menu {
+                list-style: none;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                & h3 {
+                    @include grid-pos-set(1, auto, 1, 2);
+                    font-weight: lighter;
+                    margin-top: 27px;
+                }
+
+                & .list-item {
+                    display: grid;
+                    margin-bottom: 33px;
+                    background: $txt-fond-sombre;
+
+                    @for $i from 1 to 10 {
+                        &--#{$i} {
+
+                            & h4 {
+                                font-weight: initial;
+                                margin: 0;
+                                padding-bottom: 2px;
+                            }
+
+                            & p {
+                                margin: 0;
+                                font-weight: lighter;
+                            }
+
+                            & strong {
+                                border: 2px solid red;
+                                position: absolute;
+                                right: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

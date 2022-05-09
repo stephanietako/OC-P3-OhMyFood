@@ -1,7 +1,22 @@
 header {
     font-family: 'Shrikhand', cursive;
     text-align: center;
-    padding: 0 0 8px 0;
+    padding: 10px 0 10px 0;
     position: relative;
     @extend %border-shadow;
+    position: relative;
+
+    & a {
+        text-decoration: none;
+        margin: 0;
+
+        & h1 {
+            margin: 0;
+            color: $txt-fond-clair;
+
+            & span {
+                padding: 0 0.5em 0 0;
+            }
+        }
+    }
 }
