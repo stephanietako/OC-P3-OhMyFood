@@ -227,13 +227,11 @@ main {
 
                                 & h4 {
                                     margin: 0;
-                                    border: 2px solid red;
                                 }
 
                                 & p {
                                     margin: 0;
                                     font-weight: lighter;
-                                    border: 2px solid red;
                                     right: 1.5rem;
                                 }
                             }
@@ -257,5 +255,13 @@ main {
                 }
             }
         }
+    }
+
+    & .commander {
+        display: flex;
+        @include grid-template-set1 (1);
+        padding: 2em 0 3em;
+        background: #f6f6f6;
+
     }
 }
