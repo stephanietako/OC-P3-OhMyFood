@@ -261,5 +261,11 @@ main {
         @extend %grid-center;
         background: #f6f6f6;
         padding: 2em 0 3em;
+
+        & a {
+            text-decoration: none;
+        }
     }
+
+
 }

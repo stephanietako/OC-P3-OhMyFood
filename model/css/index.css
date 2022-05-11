@@ -468,5 +468,7 @@ main {
   main .commander {
     background: #f6f6f6;
     padding: 2em 0 3em; }
+    main .commander a {
+      text-decoration: none; }
 
 /*# sourceMappingURL=index.css.map */
