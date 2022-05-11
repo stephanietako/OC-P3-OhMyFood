@@ -159,13 +159,11 @@ main {
     }
 
     & .menuDuResto__cover {
-        height: 35.5em;
-        width: 100%;
-        object-fit: cover;
+        @include img-cover-pages;
     }
 
     & .menuDuResto {
-        grid-template-columns: repeat(1, 1fr);
+        @include grid-template-set1(1);
 
         & .menuDuResto__carte {
             border-radius: 22px 22px 0 0;
@@ -219,17 +217,27 @@ main {
                             align-items: center;
                             overflow: hidden;
 
+
                             & .item-inner {
                                 padding: 12px;
+                                display: grid;
 
                                 & h4 {
                                     margin: 0;
                                 }
 
-                                & p {
+                                & .overflow-ellipsis {
                                     margin: 0;
                                     font-weight: lighter;
                                     right: 1.5rem;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    flex-shrink: 1;
+                                    flex-grow: 1;
+
+
+
                                 }
                             }
                         }

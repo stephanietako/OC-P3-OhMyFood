@@ -215,8 +215,8 @@ main {
             font-size: 1.5em;
             cursor: pointer; }
   main .menuDuResto__cover {
-    height: 35.5em;
     width: 100%;
+    height: 35.5em;
     object-fit: cover; }
   main .menuDuResto {
     grid-template-columns: repeat(1, 1fr); }
@@ -263,13 +263,19 @@ main {
             align-items: center;
             overflow: hidden; }
             main .menuDuResto .menuDuResto__carte .list-menu .list-item--1 .item-inner {
-              padding: 12px; }
+              padding: 12px;
+              display: grid; }
               main .menuDuResto .menuDuResto__carte .list-menu .list-item--1 .item-inner h4 {
                 margin: 0; }
-              main .menuDuResto .menuDuResto__carte .list-menu .list-item--1 .item-inner p {
+              main .menuDuResto .menuDuResto__carte .list-menu .list-item--1 .item-inner .overflow-ellipsis {
                 margin: 0;
                 font-weight: lighter;
-                right: 1.5rem; }
+                right: 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-shrink: 1;
+                flex-grow: 1; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -286,13 +292,19 @@ main {
             align-items: center;
             overflow: hidden; }
             main .menuDuResto .menuDuResto__carte .list-menu .list-item--2 .item-inner {
-              padding: 12px; }
+              padding: 12px;
+              display: grid; }
               main .menuDuResto .menuDuResto__carte .list-menu .list-item--2 .item-inner h4 {
                 margin: 0; }
-              main .menuDuResto .menuDuResto__carte .list-menu .list-item--2 .item-inner p {
+              main .menuDuResto .menuDuResto__carte .list-menu .list-item--2 .item-inner .overflow-ellipsis {
                 margin: 0;
                 font-weight: lighter;
-                right: 1.5rem; }
+                right: 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-shrink: 1;
+                flex-grow: 1; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -309,13 +321,19 @@ main {
             align-items: center;
             overflow: hidden; }
             main .menuDuResto .menuDuResto__carte .list-menu .list-item--3 .item-inner {
-              padding: 12px; }
+              padding: 12px;
+              display: grid; }
               main .menuDuResto .menuDuResto__carte .list-menu .list-item--3 .item-inner h4 {
                 margin: 0; }
-              main .menuDuResto .menuDuResto__carte .list-menu .list-item--3 .item-inner p {
+              main .menuDuResto .menuDuResto__carte .list-menu .list-item--3 .item-inner .overflow-ellipsis {
                 margin: 0;
                 font-weight: lighter;
-                right: 1.5rem; }
+                right: 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-shrink: 1;
+                flex-grow: 1; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -332,13 +350,19 @@ main {
             align-items: center;
             overflow: hidden; }
             main .menuDuResto .menuDuResto__carte .list-menu .list-item--4 .item-inner {
-              padding: 12px; }
+              padding: 12px;
+              display: grid; }
               main .menuDuResto .menuDuResto__carte .list-menu .list-item--4 .item-inner h4 {
                 margin: 0; }
-              main .menuDuResto .menuDuResto__carte .list-menu .list-item--4 .item-inner p {
+              main .menuDuResto .menuDuResto__carte .list-menu .list-item--4 .item-inner .overflow-ellipsis {
                 margin: 0;
                 font-weight: lighter;
-                right: 1.5rem; }
+                right: 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-shrink: 1;
+                flex-grow: 1; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -355,13 +379,19 @@ main {
             align-items: center;
             overflow: hidden; }
             main .menuDuResto .menuDuResto__carte .list-menu .list-item--5 .item-inner {
-              padding: 12px; }
+              padding: 12px;
+              display: grid; }
               main .menuDuResto .menuDuResto__carte .list-menu .list-item--5 .item-inner h4 {
                 margin: 0; }
-              main .menuDuResto .menuDuResto__carte .list-menu .list-item--5 .item-inner p {
+              main .menuDuResto .menuDuResto__carte .list-menu .list-item--5 .item-inner .overflow-ellipsis {
                 margin: 0;
                 font-weight: lighter;
-                right: 1.5rem; }
+                right: 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-shrink: 1;
+                flex-grow: 1; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -378,13 +408,19 @@ main {
             align-items: center;
             overflow: hidden; }
             main .menuDuResto .menuDuResto__carte .list-menu .list-item--6 .item-inner {
-              padding: 12px; }
+              padding: 12px;
+              display: grid; }
               main .menuDuResto .menuDuResto__carte .list-menu .list-item--6 .item-inner h4 {
                 margin: 0; }
-              main .menuDuResto .menuDuResto__carte .list-menu .list-item--6 .item-inner p {
+              main .menuDuResto .menuDuResto__carte .list-menu .list-item--6 .item-inner .overflow-ellipsis {
                 margin: 0;
                 font-weight: lighter;
-                right: 1.5rem; }
+                right: 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-shrink: 1;
+                flex-grow: 1; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -401,13 +437,19 @@ main {
             align-items: center;
             overflow: hidden; }
             main .menuDuResto .menuDuResto__carte .list-menu .list-item--7 .item-inner {
-              padding: 12px; }
+              padding: 12px;
+              display: grid; }
               main .menuDuResto .menuDuResto__carte .list-menu .list-item--7 .item-inner h4 {
                 margin: 0; }
-              main .menuDuResto .menuDuResto__carte .list-menu .list-item--7 .item-inner p {
+              main .menuDuResto .menuDuResto__carte .list-menu .list-item--7 .item-inner .overflow-ellipsis {
                 margin: 0;
                 font-weight: lighter;
-                right: 1.5rem; }
+                right: 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-shrink: 1;
+                flex-grow: 1; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -424,13 +466,19 @@ main {
             align-items: center;
             overflow: hidden; }
             main .menuDuResto .menuDuResto__carte .list-menu .list-item--8 .item-inner {
-              padding: 12px; }
+              padding: 12px;
+              display: grid; }
               main .menuDuResto .menuDuResto__carte .list-menu .list-item--8 .item-inner h4 {
                 margin: 0; }
-              main .menuDuResto .menuDuResto__carte .list-menu .list-item--8 .item-inner p {
+              main .menuDuResto .menuDuResto__carte .list-menu .list-item--8 .item-inner .overflow-ellipsis {
                 margin: 0;
                 font-weight: lighter;
-                right: 1.5rem; }
+                right: 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-shrink: 1;
+                flex-grow: 1; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -447,13 +495,19 @@ main {
             align-items: center;
             overflow: hidden; }
             main .menuDuResto .menuDuResto__carte .list-menu .list-item--9 .item-inner {
-              padding: 12px; }
+              padding: 12px;
+              display: grid; }
               main .menuDuResto .menuDuResto__carte .list-menu .list-item--9 .item-inner h4 {
                 margin: 0; }
-              main .menuDuResto .menuDuResto__carte .list-menu .list-item--9 .item-inner p {
+              main .menuDuResto .menuDuResto__carte .list-menu .list-item--9 .item-inner .overflow-ellipsis {
                 margin: 0;
                 font-weight: lighter;
-                right: 1.5rem; }
+                right: 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-shrink: 1;
+                flex-grow: 1; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
