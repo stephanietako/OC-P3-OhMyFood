@@ -6,6 +6,12 @@ header {
     @extend %border-shadow;
     position: relative;
 
+    & .menuDuResto__cover {
+        height: 35.5em;
+        width: 100%;
+        object-fit: cover;
+    }
+
     & a {
         text-decoration: none;
         margin: 0;
