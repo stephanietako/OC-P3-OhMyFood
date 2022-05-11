@@ -258,10 +258,8 @@ main {
     }
 
     & .commander {
-        display: flex;
-        @include grid-template-set1 (1);
-        padding: 2em 0 3em;
+        @extend %grid-center;
         background: #f6f6f6;
-
+        padding: 2em 0 3em;
     }
 }

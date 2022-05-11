@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap");
-main .localisation, main .presentation, main .commentCaMarche, main .lesRestaurants {
+main .localisation, main .presentation, main .commentCaMarche, main .lesRestaurants, main .commander {
   display: grid;
   align-items: center;
   justify-items: center; }
@@ -466,9 +466,7 @@ main {
             text-align: center;
             padding: 27px; }
   main .commander {
-    display: flex;
-    grid-template-columns: repeat(1, 1fr);
-    padding: 2em 0 3em;
-    background: #f6f6f6; }
+    background: #f6f6f6;
+    padding: 2em 0 3em; }
 
 /*# sourceMappingURL=index.css.map */
