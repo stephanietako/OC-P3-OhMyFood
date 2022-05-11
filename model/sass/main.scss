@@ -195,14 +195,32 @@ main {
                 @include grid-pos-set (2, auto, 1, 5);
                 display: grid;
                 @include grid-template-set1 (1);
-                grid-gap: 2em;
+                grid-gap: 1em;
                 justify-self: normal;
                 padding: 0;
                 margin: 1em 1em 0;
 
-                & h3 {
+                & .titreMenu {
                     font-weight: lighter;
                     margin: 0;
+                    padding-bottom: 9px;
+                    ;
+
+                    &--underline {
+                        margin: 0;
+                        color: $txt-fond-clair;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            height: 4px;
+                            width: 6%;
+                            background: $color-tertiary;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                        }
+                    }
                 }
 
                 & .list-item {

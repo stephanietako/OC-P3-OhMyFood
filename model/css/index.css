@@ -246,13 +246,26 @@ main {
         grid-column: 1 / 5;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 2em;
+        grid-gap: 1em;
         justify-self: normal;
         padding: 0;
         margin: 1em 1em 0; }
-        main .menuDuResto .menuDuResto__carte .list-menu h3 {
+        main .menuDuResto .menuDuResto__carte .list-menu .titreMenu {
           font-weight: lighter;
-          margin: 0; }
+          margin: 0;
+          padding-bottom: 9px; }
+          main .menuDuResto .menuDuResto__carte .list-menu .titreMenu--underline {
+            margin: 0;
+            color: #000000;
+            position: relative; }
+            main .menuDuResto .menuDuResto__carte .list-menu .titreMenu--underline::after {
+              content: "";
+              height: 4px;
+              width: 6%;
+              background: #99E2D0;
+              position: absolute;
+              left: 0;
+              bottom: 0; }
         main .menuDuResto .menuDuResto__carte .list-menu .list-item {
           display: flex;
           max-width: 100%;
@@ -273,9 +286,7 @@ main {
                 right: 1.5rem;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
-                flex-shrink: 1;
-                flex-grow: 1; }
+                text-overflow: ellipsis; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -302,9 +313,7 @@ main {
                 right: 1.5rem;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
-                flex-shrink: 1;
-                flex-grow: 1; }
+                text-overflow: ellipsis; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -331,9 +340,7 @@ main {
                 right: 1.5rem;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
-                flex-shrink: 1;
-                flex-grow: 1; }
+                text-overflow: ellipsis; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -360,9 +367,7 @@ main {
                 right: 1.5rem;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
-                flex-shrink: 1;
-                flex-grow: 1; }
+                text-overflow: ellipsis; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -389,9 +394,7 @@ main {
                 right: 1.5rem;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
-                flex-shrink: 1;
-                flex-grow: 1; }
+                text-overflow: ellipsis; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -418,9 +421,7 @@ main {
                 right: 1.5rem;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
-                flex-shrink: 1;
-                flex-grow: 1; }
+                text-overflow: ellipsis; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -447,9 +448,7 @@ main {
                 right: 1.5rem;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
-                flex-shrink: 1;
-                flex-grow: 1; }
+                text-overflow: ellipsis; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -476,9 +475,7 @@ main {
                 right: 1.5rem;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
-                flex-shrink: 1;
-                flex-grow: 1; }
+                text-overflow: ellipsis; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
@@ -505,9 +502,7 @@ main {
                 right: 1.5rem;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
-                flex-shrink: 1;
-                flex-grow: 1; }
+                text-overflow: ellipsis; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
             justify-content: end;
             margin-left: auto;
