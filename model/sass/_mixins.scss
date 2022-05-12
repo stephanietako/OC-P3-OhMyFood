@@ -8,8 +8,14 @@
     grid-column: $col-start unquote("/") $col-end;
 }
 
-@mixin img-cover-pages ($width: 100%, $height: 35.5em, $object-fit: cover) {
+@mixin img-cover-pages($width: 100%, $height: 35.5em, $object-fit: cover) {
     width: $width;
     height: $height;
     object-fit: $object-fit;
+}
+
+@mixin MenuResto-carte($bg: $background-gris-clair, $index: 1, $margin-top: -4rem) {
+    background-color: $bg;
+    z-index: $index;
+    margin-top: $margin-top;
 }

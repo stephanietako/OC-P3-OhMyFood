@@ -166,17 +166,14 @@ main {
         @include grid-template-set1(1);
 
         & .menuDuResto__carte {
-            border-radius: 22px 22px 0 0;
-            background-color: $background-gris-clair;
-            position: relative;
-            z-index: 1;
-            margin-top: -4rem;
+            @include MenuResto-carte;
+            @extend %border-radius-menuRestoCarte;
+            @extend %position-menuRestoCarte;
 
             & h2 {
                 font-family: 'Shrikhand', cursive;
                 font-size: 28px;
-                padding-left: 15px;
-                padding-top: 22px;
+                padding: 22px 0 0 15px;
                 margin: 0;
 
                 & button {

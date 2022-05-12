@@ -8,6 +8,12 @@ main .localisation, main .presentation, main .commentCaMarche, main .lesRestaura
 .btn, header, main .lesRestaurants ul li a {
   box-shadow: 0 3px 10px #dcdcdc; }
 
+main .menuDuResto .menuDuResto__carte {
+  border-radius: 22px 22px 0 0; }
+
+main .menuDuResto .menuDuResto__carte {
+  position: relative; }
+
 .btn {
   padding: 1em 1.5em;
   color: #ffffff;
@@ -202,7 +208,7 @@ main {
           main .lesRestaurants ul li a img {
             padding: 0 0 0.5rem 0;
             width: 100%;
-            max-height: 60%;
+            height: 16rem;
             object-fit: cover;
             border-radius: 1.5em 1.5em 0 0; }
           main .lesRestaurants ul li a h3,
@@ -221,16 +227,13 @@ main {
   main .menuDuResto {
     grid-template-columns: repeat(1, 1fr); }
     main .menuDuResto .menuDuResto__carte {
-      border-radius: 22px 22px 0 0;
       background-color: #f6f6f6;
-      position: relative;
       z-index: 1;
       margin-top: -4rem; }
       main .menuDuResto .menuDuResto__carte h2 {
         font-family: 'Shrikhand', cursive;
         font-size: 28px;
-        padding-left: 15px;
-        padding-top: 22px;
+        padding: 22px 0 0 15px;
         margin: 0; }
         main .menuDuResto .menuDuResto__carte h2 button {
           position: absolute;
