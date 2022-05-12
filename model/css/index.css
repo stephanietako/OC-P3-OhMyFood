@@ -6,7 +6,7 @@ main .localisation, main .presentation, main .commentCaMarche, main .lesRestaura
   justify-items: center; }
 
 .btn, header, main .lesRestaurants ul li a {
-  box-shadow: 0 3px 10px #dcdcdc; }
+  box-shadow: 0 3px 10px #353535; }
 
 main .menuDuResto .menuDuResto__carte {
   border-radius: 22px 22px 0 0; }
