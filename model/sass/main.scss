@@ -77,8 +77,24 @@ main {
             top: 35px;
         }
 
-        & li {
+        & .list-item {
             display: block;
+            padding: 0px 15px 15px 15px;
+
+            &--index {
+                cursor: pointer;
+                transform: scale(1);
+                transition-property: transform;
+                transition-duration: all 400ms ease;
+            }
+
+            &:hover {
+                transform: scale(1.02);
+
+                & .fas {
+                    color: $color-primary;
+                }
+            }
 
             & p {
                 margin: 0;
@@ -190,7 +206,6 @@ main {
                 display: grid;
                 list-style: none;
                 @include grid-pos-set (2, auto, 1, 5);
-                display: grid;
                 @include grid-template-set1 (1);
                 grid-gap: 1em;
                 justify-self: normal;
@@ -221,9 +236,7 @@ main {
                 }
 
                 & .list-item {
-                    max-width: 100%;
-                    background: $txt-fond-sombre;
-                    padding: 0;
+                    display: block;
                     overflow: hidden;
                     cursor: pointer;
 
@@ -250,27 +263,33 @@ main {
                                 }
                             }
                         }
-                    }
 
-                    & strong {
-                        justify-content: end;
-                        margin-left: auto;
-                        margin-top: 21px;
-                        padding: 12px;
-                    }
+                        & strong {
+                            display: inline-block;
+                            justify-content: end;
+                            margin-left: auto;
+                            margin-top: 21px;
+                            padding: 12px;
+                        }
 
-                    & span .fas.fa-check-circle {
-                        display: inline-block;
-                        background: #99E2D0;
-                        margin-right: -3rem;
-                        text-align: center;
-                        color: $txt-fond-sombre;
-                        padding: 22px;
-                        font-size: 22px;
-                        transition: all 400ms ease;
+                        &--menu {
+                            max-width: 100%;
+                            background: $txt-fond-sombre;
+                            padding: 0;
 
-                        &:hover {
-                            margin-right: 0;
+                            &:hover {
+                                margin-right: 0;
+
+                                & .fas.fa-check-circle {
+                                    background: $color-tertiary;
+                                    margin-right: -4rem;
+                                    text-align: center;
+                                    color: $txt-fond-sombre;
+                                    padding: 22px;
+                                    font-size: 22px;
+                                    transition: margin-right 400ms ease-in-out;
+                                }
+                            }
                         }
                     }
                 }
