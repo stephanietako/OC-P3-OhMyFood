@@ -183,7 +183,7 @@ main {
     }
 
     & .menuDuResto__cover {
-        @include img-cover-pages;
+        @include img-cover-pages(100%, 35.5em, cover);
     }
 
     & .menuDuResto {

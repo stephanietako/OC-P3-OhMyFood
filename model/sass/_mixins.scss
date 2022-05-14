@@ -8,7 +8,7 @@
     grid-column: $col-start unquote("/") $col-end;
 }
 
-@mixin img-cover-pages($width: 100%, $height: 35.5em, $object-fit: cover) {
+@mixin img-cover-pages($width, $height, $object-fit) {
     width: $width;
     height: $height;
     object-fit: $object-fit;
