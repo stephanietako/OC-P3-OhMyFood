@@ -80,16 +80,10 @@ main {
         & .list-item {
             display: block;
             padding: 0px 15px 15px 15px;
-
-            &--index {
-                cursor: pointer;
-                transform: scale(1);
-                transition-property: transform;
-                transition-duration: all 400ms ease;
-            }
+            cursor: pointer;
 
             &:hover {
-                transform: scale(1.02);
+                background-color: lighten(hsl(267, 66%, 60%), 35%);
 
                 & .fas {
                     color: $color-primary;

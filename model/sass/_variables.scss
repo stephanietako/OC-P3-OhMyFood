@@ -2,16 +2,21 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$hsl-color-primary: hsl(267, 66%, 60%);
 
 //Couleur secondaires
 $gris-sombre: #353535;
 $gris-clair: #7d7d7d;
 $background-gris-clair: #f6f6f6;
 
-//Textes
+//Couleur textes et autres utilisations
 $txt-fond-clair: #000000;
 $txt-fond-sombre: #ffffff;
 
 
 $tablette: 960px;
 $desktop: 1270px;
+
+$radial-gradient: radial-gradient(100% 50% at 20% 10%,
+    #FF79DA 0%,
+    #9356DC 200%);
