@@ -79,7 +79,6 @@ main {
 
         & .list-item {
             display: block;
-            padding: 0px 15px 15px 15px;
             cursor: pointer;
 
             &:hover {
@@ -90,13 +89,9 @@ main {
                 }
             }
 
-            & p {
-                margin: 0;
-
-                & .fas {
-                    margin: 15px;
-                    color: $gris-clair;
-                }
+            & .fas {
+                margin: 15px;
+                color: $gris-clair;
             }
         }
     }
@@ -191,7 +186,7 @@ main {
             & h2 {
                 font-family: 'Shrikhand', cursive;
                 font-size: 28px;
-                padding: 22px 0 0 15px;
+                padding: 22px 0 20px 15px;
                 margin: 0;
 
                 & button {
@@ -201,6 +196,21 @@ main {
                     cursor: pointer;
                     border: transparent;
                     background: transparent;
+                }
+            }
+
+            & .titreMenu {
+                justify-self: start;
+                text-transform: uppercase;
+                line-height: 2;
+                margin: 0;
+                font-weight: 100;
+
+                &::after {
+                    border-bottom: 3px #99E2D0 solid;
+                    content: '';
+                    display: block;
+                    width: 3rem;
                 }
             }
 
@@ -214,19 +224,6 @@ main {
                 padding: 0;
                 margin: 1em 1em 0;
 
-                & .titreMenu {
-                    justify-self: start;
-                    text-transform: uppercase;
-                    font-weight: normal;
-
-                    &::after {
-                        border-bottom: 3px #99E2D0 solid;
-                        content: '';
-                        display: block;
-                        width: 3rem;
-                    }
-                }
-
                 & .list-item {
                     position: relative;
                     padding: 1em;
@@ -235,32 +232,32 @@ main {
                     font-size: 1.05em;
 
                     & h4 {
-                        margin: 0 0 0.5rem 0;
+                        margin: 0;
                         font-size: 1.1em;
                     }
 
                     & p {
-                        font-size: 1em;
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         width: 85%;
                         overflow: hidden;
                         transition: all 0.5s;
+                        margin: 0;
                     }
 
                     & strong {
+                        display: inline-block;
                         position: absolute;
-                        right: 2rem;
+                        right: 1rem;
                         bottom: 1rem;
                         transition: all 0.5s;
-                        font-weight: 600;
                     }
 
                     & span {
                         position: absolute;
                         top: 0;
-                        right: -5rem;
-                        width: 5rem;
+                        right: -4rem;
+                        width: 4rem;
                         height: 100%;
                         font-size: 1.5em;
                         display: flex;
@@ -302,11 +299,11 @@ main {
 
                 & .list-item:hover {
                     & p {
-                        width: 67%;
+                        width: 47%;
                     }
 
                     & strong {
-                        right: 6.5rem;
+                        right: 5rem;
                     }
 
                     & span {
@@ -324,11 +321,12 @@ main {
 
     & .commander {
         @extend %grid-center;
-        background: #f6f6f6;
-        padding: 2em 0 3em;
+        background: $txt-fond-sombre;
+        padding: 3rem 0 5rem 0;
 
         & a {
             text-decoration: none;
+            padding: 1em 3em;
         }
     }
 }
