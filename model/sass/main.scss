@@ -35,12 +35,8 @@ main {
         background: $background-gris-clair;
         text-align: center;
 
-        & h2 {
-            padding: 0 5em;
-        }
-
         & p {
-            padding: 1em 5em 2em;
+            padding: 1em 2em 2em;
             color: $gris-clair;
         }
     }
@@ -112,7 +108,7 @@ main {
             @include grid-pos-set (2, auto, 1, 5);
             display: grid;
             @include grid-template-set1 (1);
-            grid-gap: 2em;
+            grid-gap: 1em;
             justify-self: normal;
             margin: 1em 0;
 
@@ -163,7 +159,7 @@ main {
                         position: absolute;
                         bottom: 2.5rem;
                         right: 1.5rem;
-                        font-size: 1.5em;
+                        font-size: 1.7em;
                         cursor: pointer;
                     }
                 }
@@ -222,44 +218,50 @@ main {
                 grid-gap: 1em;
                 justify-self: normal;
                 padding: 0;
-                margin: 1em 1em 0;
+                margin: 16px 10px 0;
 
                 & .list-item {
+                    @include grid-template-set1 (1);
+                    display: grid;
                     position: relative;
-                    padding: 1em;
+                    padding: 11px;
                     cursor: pointer;
                     overflow: hidden;
                     font-size: 1.05em;
 
                     & h4 {
                         margin: 0;
-                        font-size: 1.1em;
+                        font-size: 17px;
+                        margin-bottom: 4px;
                     }
 
                     & p {
                         text-overflow: ellipsis;
                         white-space: nowrap;
-                        width: 85%;
+                        width: 87%;
                         overflow: hidden;
                         transition: all 0.5s;
                         margin: 0;
+                        font-size: 14px;
+                        font-weight: 100;
                     }
 
                     & strong {
-                        display: inline-block;
+                        display: block;
                         position: absolute;
                         right: 1rem;
-                        bottom: 1rem;
+                        bottom: 0.6rem;
                         transition: all 0.5s;
+                        font-size: 14px;
                     }
 
                     & span {
                         position: absolute;
                         top: 0;
-                        right: -4rem;
-                        width: 4rem;
+                        right: -3.5rem;
+                        width: 3.5rem;
                         height: 100%;
-                        font-size: 1.5em;
+                        font-size: 22px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -287,7 +289,6 @@ main {
                     @keyframes smoothAnim {
                         0% {
                             transform: translateY(2em);
-
                         }
 
                         100% {
@@ -298,8 +299,9 @@ main {
                 }
 
                 & .list-item:hover {
+
                     & p {
-                        width: 47%;
+                        width: 65%;
                     }
 
                     & strong {

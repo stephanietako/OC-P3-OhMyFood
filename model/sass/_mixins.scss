@@ -10,7 +10,7 @@
 
 @mixin img-cover-pages($width, $height, $object-fit) {
     width: $width;
-    height: $height;
+    max-height: $height;
     object-fit: $object-fit;
 }
 
