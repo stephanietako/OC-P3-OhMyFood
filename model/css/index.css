@@ -79,8 +79,8 @@ button:hover .heart-hover {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: white;
-  animation: 0.5s fadeOut 5500ms ease forwards; }
+  background-color: #ffffff;
+  animation: 2s fadeOut 2s ease forwards; }
 
 @keyframes fadeOut {
   from {
@@ -263,7 +263,8 @@ main {
           grid-template-columns: repeat(2, 1fr); } }
       main .lesRestaurants ul li {
         display: inline-block;
-        width: 100%; }
+        width: 100%;
+        background: white; }
         main .lesRestaurants ul li a {
           display: block;
           position: relative;
@@ -284,18 +285,20 @@ main {
             height: 16rem;
             object-fit: cover;
             border-radius: 1.5em 1.5em 0 0; }
-          main .lesRestaurants ul li a h3,
+          main .lesRestaurants ul li a h3 {
+            padding: 7px 0 5px 17px; }
           main .lesRestaurants ul li a p {
-            padding: 0 1rem 0.5rem; }
+            font-weight: 100;
+            padding: 0 0 7px 17px; }
           main .lesRestaurants ul li a .btn__like {
             position: absolute;
-            bottom: 2.5rem;
+            bottom: 2.2rem;
             right: 1.5rem;
             font-size: 1.7em;
             cursor: pointer; }
   main .menuDuResto__cover {
     width: 100%;
-    max-height: 35.5em;
+    max-height: 17.5em;
     object-fit: cover; }
   main .menuDuResto {
     grid-template-columns: repeat(1, 1fr); }
@@ -306,7 +309,7 @@ main {
       main .menuDuResto .menuDuResto__carte h2 {
         font-family: 'Shrikhand', cursive;
         font-size: 28px;
-        padding: 22px 0 20px 15px;
+        padding: 22px 0 0px 15px;
         margin: 0; }
         main .menuDuResto .menuDuResto__carte h2 button {
           position: absolute;
@@ -318,8 +321,8 @@ main {
       main .menuDuResto .menuDuResto__carte .titreMenu {
         justify-self: start;
         text-transform: uppercase;
-        line-height: 2;
-        margin: 0;
+        line-height: 1.5;
+        margin: 19px 0 0 0px;
         font-weight: 100; }
         main .menuDuResto .menuDuResto__carte .titreMenu::after {
           border-bottom: 3px #99E2D0 solid;
@@ -343,7 +346,8 @@ main {
           padding: 11px;
           cursor: pointer;
           overflow: hidden;
-          font-size: 1.05em; }
+          font-size: 1.05em;
+          background: #ffffff; }
           main .menuDuResto .menuDuResto__carte .list-menu .list-item h4 {
             margin: 0;
             font-size: 17px;
@@ -416,7 +420,7 @@ main {
           main .menuDuResto .menuDuResto__carte .list-menu .list-item:hover span i {
             transform: rotate(0deg); }
   main .commander {
-    background: #ffffff;
+    background: #f6f6f6;
     padding: 3rem 0 5rem 0; }
     main .commander a {
       text-decoration: none;

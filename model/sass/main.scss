@@ -100,14 +100,14 @@ main {
         background: $background-gris-clair;
 
         & h2 {
-            @include grid-pos-set (1, auto, 1, 2);
+            @include grid-pos-set(1, auto, 1, 2);
             justify-self: start;
         }
 
         & ul {
             @include grid-pos-set (2, auto, 1, 5);
             display: grid;
-            @include grid-template-set1 (1);
+            @include grid-template-set1(1);
             grid-gap: 1em;
             justify-self: normal;
             margin: 1em 0;
@@ -123,6 +123,7 @@ main {
             & li {
                 display: inline-block;
                 width: 100%;
+                background: white;
 
                 & a {
                     display: block;
@@ -150,14 +151,18 @@ main {
                         border-radius: 1.5em 1.5em 0 0;
                     }
 
-                    & h3,
+                    & h3 {
+                        padding: 7px 0 5px 17px;
+                    }
+
                     p {
-                        padding: 0 1rem 0.5rem;
+                        font-weight: 100;
+                        padding: 0 0 7px 17px;
                     }
 
                     & .btn__like {
                         position: absolute;
-                        bottom: 2.5rem;
+                        bottom: 2.2rem;
                         right: 1.5rem;
                         font-size: 1.7em;
                         cursor: pointer;
@@ -168,7 +173,7 @@ main {
     }
 
     & .menuDuResto__cover {
-        @include img-cover-pages(100%, 35.5em, cover);
+        @include img-cover-pages(100%, 17.5em, cover);
     }
 
     & .menuDuResto {
@@ -182,7 +187,7 @@ main {
             & h2 {
                 font-family: 'Shrikhand', cursive;
                 font-size: 28px;
-                padding: 22px 0 20px 15px;
+                padding: 22px 0 0px 15px;
                 margin: 0;
 
                 & button {
@@ -198,8 +203,8 @@ main {
             & .titreMenu {
                 justify-self: start;
                 text-transform: uppercase;
-                line-height: 2;
-                margin: 0;
+                line-height: 1.5;
+                margin: 19px 0 0 0px;
                 font-weight: 100;
 
                 &::after {
@@ -221,13 +226,14 @@ main {
                 margin: 16px 10px 0;
 
                 & .list-item {
-                    @include grid-template-set1 (1);
+                    @include grid-template-set1(1);
                     display: grid;
                     position: relative;
                     padding: 11px;
                     cursor: pointer;
                     overflow: hidden;
                     font-size: 1.05em;
+                    background: $txt-fond-sombre;
 
                     & h4 {
                         margin: 0;
@@ -323,7 +329,7 @@ main {
 
     & .commander {
         @extend %grid-center;
-        background: $txt-fond-sombre;
+        background: $background-gris-clair;
         padding: 3rem 0 5rem 0;
 
         & a {
