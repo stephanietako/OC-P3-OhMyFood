@@ -1,0 +1,188 @@
+main {
+
+    & .localisation {
+        @extend %grid-center;
+        @include grid-template-set1(1);
+        padding: 1em;
+        background: $bg-clear-grey;
+        background: linear-gradient(180deg,
+                rgba(173, 173, 173, .35) 0%,
+                rgba(234, 234, 234, .75) 15%,
+                rgba(234, 234, 234, 1) 100%);
+
+        & a {
+            color: $black;
+        }
+
+        & i {
+            padding: 0 0.5em 0 0;
+        }
+    }
+
+    & .presentation {
+        @extend %grid-center;
+        @include grid-template-set1(1);
+        padding: 2em 0 3em;
+        background: $bg-clear-grey;
+        text-align: center;
+
+        & p {
+            padding: 1em 2em 2em;
+            color: $clear-grey;
+        }
+    }
+
+    & .commentCaMarche {
+        @include grid-template-set1(1);
+        @extend %grid-center;
+        padding: 3em 1.5em 4em;
+
+        @media (min-width: $desktop) {
+            padding: 3em 10em 7em;
+        }
+
+        & h2 {
+            @include grid-pos-set(1, auto, 1, 2);
+            justify-self: start;
+        }
+
+        & ol {
+            @include grid-pos-set(2, auto, 1, 4);
+            display: grid;
+            @include grid-template-set1(1);
+            gap: 2em;
+            margin: 25px 0px 0 15px;
+            justify-self: normal;
+            counter-reset: section;
+
+            @media (min-width: $desktop) {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+        }
+
+        & li::before {
+            counter-increment: section;
+            content: counter(section);
+            position: relative;
+            left: -1.9em;
+            padding: 0.3em 0.6em;
+            border-radius: 70%;
+            background-color: $color-primary;
+            color: $white;
+            top: 1.7rem;
+        }
+
+        & .list-item {
+            display: block;
+            cursor: pointer;
+
+            &:hover {
+                background-color: lighten(hsl(267, 66%, 60%), 35%);
+
+                & .fas {
+                    color: $color-primary;
+                }
+            }
+
+            & .fas {
+                margin: 10px;
+                margin: 8px 19px 10px 14px;
+                color: $clear-grey;
+            }
+        }
+    }
+
+    /* Debut section lesRestaurants */
+    & .lesRestaurants {
+        @extend %grid-center;
+        @include grid-template-set1(1);
+        padding: 3em 1.5em 4em;
+        background: $bg-clear-grey;
+
+        @media (min-width: $desktop) {
+            padding: 3em 15em 7em;
+
+        }
+
+        & h2 {
+            @include grid-pos-set(1, auto, 1, 2);
+            justify-self: start;
+        }
+
+        & ul {
+            @include grid-pos-set (2, auto, 1, 5);
+            display: grid;
+            @include grid-template-set1(1);
+            grid-gap: 1.5em;
+            justify-self: normal;
+            margin-top: 25px;
+
+            @media (min-width: $desktop) {
+                @include grid-template-set1(4);
+                grid-gap: 2.5em;
+            }
+
+            & li {
+                display: inline-block;
+                width: 100%;
+                background: $white;
+                border-radius: 1.5em;
+
+                & a {
+                    display: block;
+                    position: relative;
+                    padding-bottom: 0.7rem;
+                    color: $black;
+                    border-radius: 1.5em;
+                    @extend %border-shadow;
+
+                    & .sticker {
+                        position: absolute;
+                        right: 1em;
+                        top: 1em;
+                        padding: 0.4em 0.6em;
+                        color: darken($color: $color-tertiary, $amount: 50%);
+                        background: $color-tertiary;
+                        border-radius: 0.2em;
+                    }
+
+                    & img {
+                        padding-bottom: 0.5rem;
+                        padding: 0 0 0.5rem 0;
+                        width: 100%;
+                        height: 10rem;
+                        object-fit: cover;
+                        border-radius: 1.5em 1.5em 0 0;
+
+                        @media (min-width: $desktop) {
+                            height: 25rem;
+                        }
+
+                        @media (min-width: $tablette) {
+                            height: 25rem;
+                        }
+                    }
+
+                    & h3 {
+                        padding: 7px 0 5px 17px;
+                    }
+
+                    p {
+                        font-weight: 100;
+                        padding: 0 0 7px 17px;
+                    }
+
+                    & .btn__like {
+                        position: absolute;
+                        bottom: 2.2rem;
+                        right: 1.5rem;
+                        font-size: 1.7em;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

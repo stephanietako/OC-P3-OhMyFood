@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap");
 main .localisation, main .presentation, main .commentCaMarche, main .lesRestaurants, main .commander {
   display: grid;
@@ -47,18 +46,9 @@ button .heart-hover {
   transition: all 400ms ease-in-out;
   background-color: #000000;
   background-image: linear-gradient(0deg, #FF79DA, #9356DC);
-  /* cette propriété est une propriétée d'arrière-plan css qui permet 
-  de gérer les limites de la zone d'arrière-plan à l'interieur de l'élément.
-  ça va influencer l'affichage de l'image d'arrière plan ou de la couleur d'attère plan,
-  déclarée avec la propriétée background-image, background-couleur ou background. 
-  aussi background-clip vous permet de contrôler jusqu'où une image ou une couleur d'arrière-plan 
-  s'étend au-delà du rembourrage ou du contenu d'un élément.*/
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
- /* cette propriété spécifie la couleur de remplissage des caractère du texte.
-Les propriétés text-fill-color et color sont les mêmes,
-mais text-fill-color a priorité sur la couleur si les deux ont des valeurs différentes*/
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent; }
 
@@ -140,13 +130,9 @@ button:hover .heart-hover {
 header {
   font-family: 'Shrikhand', cursive;
   text-align: center;
-  padding: 10px 0 10px 0;
+  padding: 20px 0 12px;
   position: relative;
   position: relative; }
-  header .menuDuResto__cover {
-    height: 35.5em;
-    width: 100%;
-    object-fit: cover; }
   header a {
     text-decoration: none;
     margin: 0; }
@@ -156,43 +142,15 @@ header {
       header a h1 span {
         padding: 0 0.5em 0 0; }
 
-footer {
-  display: grid;
-  width: 100%;
-  height: 150px;
-  background-color: #353535; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px;
-    color: #fff;
-    margin: 0px;
-    padding: 25px 0 7px 25px; }
-  footer ul {
-    list-style: none;
-    background-color: #353535;
-    margin: 0;
-    padding-left: 16px;
-    padding-bottom: 20px; }
-    footer ul li {
-      padding: 0;
-      margin: 0; }
-      footer ul li a {
-        text-decoration: none;
-        color: #fff;
-        padding-left: 13px; }
-        footer ul li a i {
-          padding-right: 12px; }
-
 main {
-  font-family: 'Roboto', sans-serif;
   /* Debut section lesRestaurants */ }
   main .localisation {
     grid-template-columns: repeat(1, 1fr);
     padding: 1em;
-    background: #eaeaea;
+    background: #f6f6f6;
     background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, #eaeaea 100%); }
     main .localisation a {
-      color: #353535; }
+      color: #000000; }
     main .localisation i {
       padding: 0 0.5em 0 0; }
   main .presentation {
@@ -205,7 +163,10 @@ main {
       color: #7d7d7d; }
   main .commentCaMarche {
     grid-template-columns: repeat(1, 1fr);
-    padding: 3em 1em; }
+    padding: 3em 1.5em 4em; }
+    @media (min-width: 1270px) {
+      main .commentCaMarche {
+        padding: 3em 10em 7em; } }
     main .commentCaMarche h2 {
       grid-row: 1 / auto;
       grid-column: 1 / 2;
@@ -216,9 +177,12 @@ main {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 2em;
-      margin: 1em 1em 0;
+      margin: 25px 0px 0 15px;
       justify-self: normal;
       counter-reset: section; }
+      @media (min-width: 1270px) {
+        main .commentCaMarche ol {
+          grid-template-columns: repeat(3, 1fr); } }
     main .commentCaMarche li::before {
       counter-increment: section;
       content: counter(section);
@@ -228,7 +192,7 @@ main {
       border-radius: 70%;
       background-color: #9356DC;
       color: #ffffff;
-      top: 35px; }
+      top: 1.7rem; }
     main .commentCaMarche .list-item {
       display: block;
       cursor: pointer; }
@@ -237,12 +201,16 @@ main {
         main .commentCaMarche .list-item:hover .fas {
           color: #9356DC; }
       main .commentCaMarche .list-item .fas {
-        margin: 15px;
+        margin: 10px;
+        margin: 8px 19px 10px 14px;
         color: #7d7d7d; }
   main .lesRestaurants {
     grid-template-columns: repeat(1, 1fr);
-    padding: 3em 1em;
+    padding: 3em 1.5em 4em;
     background: #f6f6f6; }
+    @media (min-width: 1270px) {
+      main .lesRestaurants {
+        padding: 3em 15em 7em; } }
     main .lesRestaurants h2 {
       grid-row: 1 / auto;
       grid-column: 1 / 2;
@@ -252,23 +220,22 @@ main {
       grid-column: 1 / 5;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      grid-gap: 1em;
+      grid-gap: 1.5em;
       justify-self: normal;
-      margin: 1em 0; }
+      margin-top: 25px; }
       @media (min-width: 1270px) {
         main .lesRestaurants ul {
-          grid-template-columns: repeat(4, 1fr); } }
-      @media (min-width: 960px) {
-        main .lesRestaurants ul {
-          grid-template-columns: repeat(2, 1fr); } }
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 2.5em; } }
       main .lesRestaurants ul li {
         display: inline-block;
         width: 100%;
-        background: white; }
+        background: #ffffff;
+        border-radius: 1.5em; }
         main .lesRestaurants ul li a {
           display: block;
           position: relative;
-          padding: 0 0 0.7rem 0;
+          padding-bottom: 0.7rem;
           color: #000000;
           border-radius: 1.5em; }
           main .lesRestaurants ul li a .sticker {
@@ -280,11 +247,18 @@ main {
             background: #99E2D0;
             border-radius: 0.2em; }
           main .lesRestaurants ul li a img {
+            padding-bottom: 0.5rem;
             padding: 0 0 0.5rem 0;
             width: 100%;
-            height: 16rem;
+            height: 10rem;
             object-fit: cover;
             border-radius: 1.5em 1.5em 0 0; }
+            @media (min-width: 1270px) {
+              main .lesRestaurants ul li a img {
+                height: 25rem; } }
+            @media (min-width: 768px) {
+              main .lesRestaurants ul li a img {
+                height: 25rem; } }
           main .lesRestaurants ul li a h3 {
             padding: 7px 0 5px 17px; }
           main .lesRestaurants ul li a p {
@@ -296,134 +270,190 @@ main {
             right: 1.5rem;
             font-size: 1.7em;
             cursor: pointer; }
-  main .menuDuResto__cover {
-    width: 100%;
-    max-height: 17.5em;
-    object-fit: cover; }
-  main .menuDuResto {
-    grid-template-columns: repeat(1, 1fr); }
-    main .menuDuResto .menuDuResto__carte {
-      background-color: #f6f6f6;
-      z-index: 1;
-      margin-top: -4rem; }
-      main .menuDuResto .menuDuResto__carte h2 {
-        font-family: 'Shrikhand', cursive;
-        font-size: 28px;
-        padding: 22px 0 0px 15px;
-        margin: 0; }
-        main .menuDuResto .menuDuResto__carte h2 button {
-          position: absolute;
-          right: 1.5rem;
-          font-size: 2rem;
-          cursor: pointer;
-          border: transparent;
-          background: transparent; }
-      main .menuDuResto .menuDuResto__carte .titreMenu {
-        justify-self: start;
-        text-transform: uppercase;
-        line-height: 1.5;
-        margin: 19px 0 0 0px;
-        font-weight: 100; }
-        main .menuDuResto .menuDuResto__carte .titreMenu::after {
-          border-bottom: 3px #99E2D0 solid;
-          content: '';
-          display: block;
-          width: 3rem; }
-      main .menuDuResto .menuDuResto__carte .list-menu {
-        display: grid;
-        list-style: none;
-        grid-row: 2 / auto;
-        grid-column: 1 / 5;
+
+main .menuDuResto__cover {
+  width: 100%;
+  height: 20em;
+  object-fit: cover; }
+  @media (min-width: 768px) {
+    main .menuDuResto__cover {
+      width: 100%;
+      height: 28em;
+      object-fit: cover; } }
+  @media (min-width: 768px) and (min-width: 1270px) {
+    main .menuDuResto__cover {
+      width: 100%;
+      height: 35.5em;
+      object-fit: cover; } }
+
+main .menuDuResto {
+  grid-template-columns: repeat(1, 1fr); }
+  main .menuDuResto .menuDuResto__carte {
+    background-color: #f6f6f6;
+    z-index: 1;
+    margin-top: -4rem; }
+    main .menuDuResto .menuDuResto__carte h2 {
+      font-family: 'Shrikhand', cursive;
+      font-size: 28px;
+      padding: 22px 0 0 15px;
+      margin: 0; }
+      @media (min-width: 1270px) {
+        main .menuDuResto .menuDuResto__carte h2 {
+          padding-top: 5rem;
+          padding-left: 27rem; } }
+      main .menuDuResto .menuDuResto__carte h2 button {
+        position: absolute;
+        right: 1.5rem;
+        font-size: 2rem;
+        cursor: pointer;
+        border: transparent;
+        background: transparent; }
+        @media (min-width: 1270px) {
+          main .menuDuResto .menuDuResto__carte h2 button {
+            right: 26rem; } }
+    main .menuDuResto .menuDuResto__carte .titreMenu {
+      justify-self: start;
+      text-transform: uppercase;
+      line-height: 1.5;
+      margin: 19px 0 0 0px;
+      font-weight: 100; }
+      main .menuDuResto .menuDuResto__carte .titreMenu::after {
+        border-bottom: 3px #99E2D0 solid;
+        content: '';
+        display: block;
+        width: 2.5rem; }
+    main .menuDuResto .menuDuResto__carte .list-menu {
+      display: grid;
+      list-style: none;
+      grid-row: 2 / auto;
+      grid-column: 1 / 5;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 1em;
+      justify-self: normal;
+      padding: 0;
+      margin: 16px 10px 0; }
+      @media (min-width: 1270px) {
+        main .menuDuResto .menuDuResto__carte .list-menu {
+          margin: 2rem 27rem 0; } }
+      main .menuDuResto .menuDuResto__carte .list-menu .list-item {
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 1em;
-        justify-self: normal;
-        padding: 0;
-        margin: 16px 10px 0; }
-        main .menuDuResto .menuDuResto__carte .list-menu .list-item {
-          grid-template-columns: repeat(1, 1fr);
-          display: grid;
-          position: relative;
-          padding: 11px;
-          cursor: pointer;
+        display: grid;
+        position: relative;
+        padding: 11px;
+        cursor: pointer;
+        overflow: hidden;
+        font-size: 1.05em;
+        background: #ffffff; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item h4 {
+          margin: 0;
+          font-size: 17px;
+          margin-bottom: 4px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item p {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 87%;
           overflow: hidden;
-          font-size: 1.05em;
-          background: #ffffff; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item h4 {
-            margin: 0;
-            font-size: 17px;
-            margin-bottom: 4px; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item p {
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 87%;
-            overflow: hidden;
-            transition: all 0.5s;
-            margin: 0;
-            font-size: 14px;
-            font-weight: 100; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
-            display: block;
-            position: absolute;
-            right: 1rem;
-            bottom: 0.6rem;
-            transition: all 0.5s;
-            font-size: 14px; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item span {
-            position: absolute;
-            top: 0;
-            right: -3.5rem;
-            width: 3.5rem;
-            height: 100%;
-            font-size: 22px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-            background: #99E2D0;
-            transition: all 0.5s; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item .fa-check-circle {
-            transform: rotate(-240deg);
-            transition: all 0.5s; }
-        main .menuDuResto .menuDuResto__carte .list-menu .list-item {
-          animation: smoothAnim 1000ms forwards;
-          opacity: 0; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item--1 {
-            animation-delay: 100ms; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item--2 {
-            animation-delay: 200ms; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item--3 {
-            animation-delay: 300ms; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item--4 {
-            animation-delay: 400ms; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item--5 {
-            animation-delay: 500ms; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item--6 {
-            animation-delay: 600ms; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item--7 {
-            animation-delay: 700ms; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item--8 {
-            animation-delay: 800ms; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item--9 {
-            animation-delay: 900ms; }
+          transition: all 0.5s;
+          margin: 0;
+          font-size: 14px;
+          font-weight: 100; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item strong {
+          display: block;
+          position: absolute;
+          right: 1rem;
+          bottom: 0.6rem;
+          transition: all 0.5s;
+          font-size: 14px; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item span {
+          position: absolute;
+          top: 0;
+          right: -3.5rem;
+          width: 3.5rem;
+          height: 100%;
+          font-size: 22px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #ffffff;
+          background: #99E2D0;
+          transition: all 0.5s; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item .fa-check-circle {
+          transform: rotate(-240deg);
+          transition: all 0.5s; }
+      main .menuDuResto .menuDuResto__carte .list-menu .list-item {
+        animation: smoothAnim 1000ms forwards;
+        opacity: 0; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--1 {
+          animation-delay: 100ms; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--2 {
+          animation-delay: 200ms; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--3 {
+          animation-delay: 300ms; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--4 {
+          animation-delay: 400ms; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--5 {
+          animation-delay: 500ms; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--6 {
+          animation-delay: 600ms; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--7 {
+          animation-delay: 700ms; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--8 {
+          animation-delay: 800ms; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item--9 {
+          animation-delay: 900ms; }
 @keyframes smoothAnim {
   0% {
     transform: translateY(2em); }
   100% {
     transform: translateY(0);
     opacity: 1; } }
-        main .menuDuResto .menuDuResto__carte .list-menu .list-item:hover p {
-          width: 65%; }
-        main .menuDuResto .menuDuResto__carte .list-menu .list-item:hover strong {
-          right: 5rem; }
-        main .menuDuResto .menuDuResto__carte .list-menu .list-item:hover span {
-          right: 0; }
-          main .menuDuResto .menuDuResto__carte .list-menu .list-item:hover span i {
-            transform: rotate(0deg); }
-  main .commander {
-    background: #f6f6f6;
-    padding: 3rem 0 5rem 0; }
-    main .commander a {
-      text-decoration: none;
-      padding: 1em 3em; }
+      main .menuDuResto .menuDuResto__carte .list-menu .list-item:hover p {
+        width: 65%; }
+      main .menuDuResto .menuDuResto__carte .list-menu .list-item:hover strong {
+        right: 5rem; }
+      main .menuDuResto .menuDuResto__carte .list-menu .list-item:hover span {
+        right: 0; }
+        main .menuDuResto .menuDuResto__carte .list-menu .list-item:hover span i {
+          transform: rotate(0deg); }
+main .commander {
+  background: #f6f6f6;
+  padding: 3rem 0 5rem 0; }
+  main .commander a {
+    text-decoration: none;
+    padding: 1em 3em; }
+
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #353535; }
+  @media (min-width: 1270px) {
+    footer {
+      height: 180px; } }
+  @media (min-width: 768px) {
+    footer {
+      height: 170px; } }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0px;
+    padding: 25px 0 7px 25px; }
+  footer ul {
+    list-style: none;
+    background-color: #353535;
+    padding: 20px 0px 28px 24px; }
+    footer ul li {
+      padding-bottom: 7px; }
+      footer ul li a {
+        font-size: 17px;
+        text-decoration: none;
+        color: #ffffff; }
+        footer ul li a i {
+          padding-right: 12px; }
+
+main {
+  font-family: 'Roboto', sans-serif; }
+  main h4 {
+    font-size: 17px; }
 
 /*# sourceMappingURL=index.css.map */

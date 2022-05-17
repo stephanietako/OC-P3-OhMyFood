@@ -1,32 +1,36 @@
 footer {
-    display: grid;
     width: 100%;
     height: 150px;
-    background-color: #353535;
+    background-color: $bg-footer;
+
+    @media (min-width: $desktop) {
+        height: 180px;
+    }
+
+    @media (min-width: $tablette) {
+        height: 170px;
+    }
 
     & h2 {
         font-family: 'Shrikhand', cursive;
         font-size: 20px;
-        color: #fff;
+        color: $white;
         margin: 0px;
         padding: 25px 0 7px 25px;
     }
 
     & ul {
         list-style: none;
-        background-color: #353535;
-        margin: 0;
-        padding-left: 16px;
-        padding-bottom: 20px;
+        background-color: $bg-footer;
+        padding: 20px 0px 28px 24px;
 
         & li {
-            padding: 0;
-            margin: 0;
+            padding-bottom: 7px;
 
             & a {
+                font-size: 17px;
                 text-decoration: none;
-                color: #fff;
-                padding-left: 13px;
+                color: $white;
 
                 & i {
                     padding-right: 12px;

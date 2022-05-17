@@ -1,0 +1,190 @@
+main {
+
+    & .menuDuResto__cover {
+        @include img-cover-pages(100%, 20em, cover);
+
+        @media (min-width: $tablette) {
+            @include img-cover-pages(100%, 28em, cover);
+
+            @media (min-width: $desktop) {
+                @include img-cover-pages(100%, 35.5em, cover);
+
+            }
+        }
+    }
+
+    & .menuDuResto {
+        @include grid-template-set1(1);
+
+        & .menuDuResto__carte {
+            @include MenuResto-carte($bg-clear-grey, 1, -4rem);
+            @extend %border-radius-menuRestoCarte;
+            @extend %position-menuRestoCarte;
+
+            & h2 {
+                font-family: 'Shrikhand', cursive;
+                font-size: 28px;
+                padding: 22px 0 0 15px;
+                margin: 0;
+
+                @media (min-width: $desktop) {
+                    padding-top: 5rem;
+                    padding-left: 27rem;
+                }
+
+                & button {
+                    position: absolute;
+                    right: 1.5rem;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    border: transparent;
+                    background: transparent;
+
+                    @media (min-width: $desktop) {
+                        right: 26rem;
+                    }
+                }
+            }
+
+            & .titreMenu {
+                justify-self: start;
+                text-transform: uppercase;
+                line-height: 1.5;
+                margin: 19px 0 0 0px;
+                font-weight: 100;
+
+                &::after {
+                    border-bottom: 3px $color-tertiary solid;
+                    content: '';
+                    display: block;
+                    width: 2.5rem;
+                }
+            }
+
+            & .list-menu {
+                display: grid;
+                list-style: none;
+                @include grid-pos-set (2, auto, 1, 5);
+                @include grid-template-set1 (1);
+                grid-gap: 1em;
+                justify-self: normal;
+                padding: 0;
+                margin: 16px 10px 0;
+
+                @media (min-width: $desktop) {
+                    margin: 2rem 27rem 0;
+                }
+
+
+                & .list-item {
+                    @include grid-template-set1(1);
+                    display: grid;
+                    position: relative;
+                    padding: 11px;
+                    cursor: pointer;
+                    overflow: hidden;
+                    font-size: 1.05em;
+                    background: $white;
+
+                    & h4 {
+                        margin: 0;
+                        font-size: 17px;
+                        margin-bottom: 4px;
+                    }
+
+                    & p {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        width: 87%;
+                        overflow: hidden;
+                        transition: all 0.5s;
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: 100;
+                    }
+
+                    & strong {
+                        display: block;
+                        position: absolute;
+                        right: 1rem;
+                        bottom: 0.6rem;
+                        transition: all 0.5s;
+                        font-size: 14px;
+                    }
+
+                    & span {
+                        position: absolute;
+                        top: 0;
+                        right: -3.5rem;
+                        width: 3.5rem;
+                        height: 100%;
+                        font-size: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $white;
+                        background: $color-tertiary;
+                        transition: all 0.5s;
+                    }
+
+                    & .fa-check-circle {
+                        transform: rotate(-240deg);
+                        transition: all 0.5s;
+                    }
+                }
+
+                & .list-item {
+                    animation: smoothAnim 1000ms forwards;
+                    opacity: 0;
+
+                    @for $i from 1 to 10 {
+                        &--#{$i} {
+                            animation-delay: 100ms * $i;
+                        }
+                    }
+
+                    @keyframes smoothAnim {
+                        0% {
+                            transform: translateY(2em);
+                        }
+
+                        100% {
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                & .list-item:hover {
+                    & p {
+                        width: 65%;
+                    }
+
+                    & strong {
+                        right: 5rem;
+                    }
+
+                    & span {
+                        right: 0;
+
+                        & i {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    & .commander {
+        @extend %grid-center;
+        background: $bg-clear-grey;
+        padding: 3rem 0 5rem 0;
+
+        & a {
+            text-decoration: none;
+            padding: 1em 3em;
+        }
+    }
+}

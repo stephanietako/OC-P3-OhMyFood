@@ -1,16 +1,10 @@
 header {
     font-family: 'Shrikhand', cursive;
     text-align: center;
-    padding: 10px 0 10px 0;
+    padding: 20px 0 12px;
     position: relative;
     @extend %border-shadow;
     position: relative;
-
-    & .menuDuResto__cover {
-        height: 35.5em;
-        width: 100%;
-        object-fit: cover;
-    }
 
     & a {
         text-decoration: none;
@@ -18,7 +12,7 @@ header {
 
         & h1 {
             margin: 0;
-            color: $txt-fond-clair;
+            color: $black;
 
             & span {
                 padding: 0 0.5em 0 0;
