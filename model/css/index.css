@@ -428,10 +428,10 @@ footer {
   background-color: #353535; }
   @media (min-width: 1270px) {
     footer {
-      height: 180px; } }
+      height: 11.25rem; } }
   @media (min-width: 768px) {
     footer {
-      height: 170px; } }
+      height: 11rem; } }
   footer h2 {
     font-family: 'Shrikhand', cursive;
     font-size: 20px;

@@ -4,11 +4,11 @@ footer {
     background-color: $bg-footer;
 
     @media (min-width: $desktop) {
-        height: 180px;
+        height: 11.25rem;
     }
 
     @media (min-width: $tablette) {
-        height: 170px;
+        height: 11rem;
     }
 
     & h2 {
