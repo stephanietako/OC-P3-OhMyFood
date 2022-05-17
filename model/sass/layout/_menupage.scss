@@ -16,10 +16,10 @@ main {
     & .menuDuResto {
         @include grid-template-set1(1);
 
-        & .menuDuResto__carte {
-            @include MenuResto-carte($bg-clear-grey, 1, -4rem);
-            @extend %border-radius-menuRestoCarte;
-            @extend %position-menuRestoCarte;
+        & .menuDuResto__card {
+            @include MenuResto-card($bg-clear-grey, 1, -4rem);
+            @extend %border-radius-menuRestoCard;
+            @extend %position-menuRestoCard;
 
             & h2 {
                 font-family: 'Shrikhand', cursive;
@@ -46,7 +46,7 @@ main {
                 }
             }
 
-            & .titreMenu {
+            & .titleMenu {
                 justify-self: start;
                 text-transform: uppercase;
                 line-height: 1.5;
@@ -177,7 +177,7 @@ main {
         }
     }
 
-    & .commander {
+    & .order {
         @extend %grid-center;
         background: $bg-clear-grey;
         padding: 3rem 0 5rem 0;

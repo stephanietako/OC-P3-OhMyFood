@@ -32,7 +32,7 @@ main {
         }
     }
 
-    & .commentCaMarche {
+    & .howItWork {
         @include grid-template-set1(1);
         @extend %grid-center;
         padding: 3em 1.5em 4em;
@@ -56,9 +56,7 @@ main {
             counter-reset: section;
 
             @media (min-width: $desktop) {
-
                 grid-template-columns: repeat(3, 1fr);
-
             }
         }
 
@@ -95,7 +93,7 @@ main {
     }
 
     /* Debut section lesRestaurants */
-    & .lesRestaurants {
+    & .Restaurants {
         @extend %grid-center;
         @include grid-template-set1(1);
         padding: 3em 1.5em 4em;

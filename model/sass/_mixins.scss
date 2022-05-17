@@ -14,7 +14,7 @@
     object-fit: $object-fit;
 }
 
-@mixin MenuResto-carte($bg, $index, $margin-top) {
+@mixin MenuResto-card($bg, $index, $margin-top) {
     background-color: $bg;
     z-index: $index;
     margin-top: $margin-top;
