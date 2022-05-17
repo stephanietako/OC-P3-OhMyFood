@@ -118,7 +118,7 @@ main {
             margin-top: 25px;
 
             @media (min-width: $desktop) {
-                @include grid-template-set1(4);
+                @include grid-template-set1(2);
                 grid-gap: 2.5em;
             }
 
